@@ -23,4 +23,3 @@ while True:
 	else:
 		coin_2 = coin
 		requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=Новый токен! ' +coin)
-	time.sleep(15)
