@@ -10,7 +10,7 @@ while True:
 	coin = soup.find('div', {'class': 'sc-1teo54s-2 fZIJcI'}).text
 	print(coin)
 	if coin == coin:
-		1time.sleep(300)
+		time.sleep(300)
 		if i == 11:
 			requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=Софт работает')
 			print(i)
