@@ -10,11 +10,10 @@ while True:
 	soup = BeautifulSoup(response.content, 'html.parser')
 	coin = soup.find('div', {'class': 'sc-1teo54s-2 fZIJcI'}).text
 	coin = coin[1:]
+	time.sleep(30)
 	if coin == coin_2:
 		requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=' +coin)
 		time.sleep(60)
-		time.sleep(60)
-		time.sleep(30)
 		if i == 24:
 			requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=Софт работает')
 			i = 0
@@ -23,3 +22,4 @@ while True:
 	else:
 		coin_2 = coin
 		requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=Новый токен! ' +coin)
+	time.sleep(60)
