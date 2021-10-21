@@ -6,6 +6,7 @@ requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=62406459
 i = 1
 coin_2 = 1
 while True:
+	requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=Просто')
 	response = requests.get('https://coinmarketcap.com/new/')
 	soup = BeautifulSoup(response.content, 'html.parser')
 	coin = soup.find('div', {'class': 'sc-1teo54s-2 fZIJcI'}).text
@@ -22,4 +23,3 @@ while True:
 	else:
 		coin_2 = coin
 		requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=Новый токен! ' +coin)
-	time.sleep(15)
