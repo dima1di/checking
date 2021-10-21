@@ -12,16 +12,10 @@ while True:
 	coin = coin[1:]
 	if coin == coin_2:
 		requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=' +coin)
-		time.sleep(15)
-		time.sleep(15)
-		time.sleep(15)
-		time.sleep(15)
-		time.sleep(15)
-		time.sleep(15)
-		time.sleep(15)
-		time.sleep(15)
-		time.sleep(15)
-		time.sleep(15)
+		b = 1
+		while b <= 10:
+			time.sleep(15)
+			b = b + 1 
 		if i == 24:
 			requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=Софт работает')
 			i = 0
