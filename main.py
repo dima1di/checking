@@ -18,7 +18,7 @@ while True:
 			i = 0
 		i = i + 1
 		coin_2 = coin
-		time.sleep(30)
+		time.sleep(25)
 	else:
 		coin_2 = coin
 		requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=Новый токен! ' +coin)
