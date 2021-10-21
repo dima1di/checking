@@ -11,7 +11,7 @@ while True:
 	coin = soup.find('div', {'class': 'sc-1teo54s-2 fZIJcI'}).text
 	coin = coin[1:]
 	if coin == coin_2:
-		time.sleep(15)
+		time.sleep(150)
 		if i == 24:
 			requests.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id=624064595&text=Софт работает')
 			i = 0
